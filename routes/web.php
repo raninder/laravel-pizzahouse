@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', function () {
+Route::get('/pizzas/{id}', function ($id) {
+//use id to query db for a record
+return view('details', ['id' => $id]);
+});
+
+// Route::get('/pizzas', function () {
     // return view('pizzas');  //return view
     // return "Pizas";     //return string
     // return ['name'=> 'veg pizza', 'base' => 'classic' ];   //return in json format
@@ -30,18 +35,18 @@ Route::get('/pizzas', function () {
     // ];
     // return view ('pizzas',$pizza);
 
-    $pizzas = [
-        ['type' => 'Hawaiian', 'base' => 'classic','price' => 20],
-        ['type' => 'Veg garden', 'base' => 'cheesy crust','price' => 16],
-        ['type' => 'Tandoori Chicken', 'base' => 'garlic crust','price' => 22]
-    ];
-    // query parameters in url pizzahouse.com/?name=maria
-    $name = request('name');
-    return view ('pizzas', [
-        'pizzas' => $pizzas,
-        'name' => $name,
-        'age' => request('age')
-    ]);
-});
+//     $pizzas = [
+//         ['type' => 'Hawaiian', 'base' => 'classic','price' => 20],
+//         ['type' => 'Veg garden', 'base' => 'cheesy crust','price' => 16],
+//         ['type' => 'Tandoori Chicken', 'base' => 'garlic crust','price' => 22]
+//     ];
+//     // query parameters in url pizzahouse.com/?name=maria
+//     $name = request('name');
+//     return view ('pizzas', [
+//         'pizzas' => $pizzas,
+//         'name' => $name,
+//         'age' => request('age')
+//     ]);
+// });
 
 ?>
