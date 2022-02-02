@@ -18,7 +18,9 @@
     @endif
 
     <div class="content">
+    <img src="/img/logo_trans.png" alt=" Pizza house" />
         <div class="title m-b-md">
+           
             Pizza House
         </div>
 
