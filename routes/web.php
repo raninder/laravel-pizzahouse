@@ -35,7 +35,13 @@ Route::get('/pizzas', function () {
         ['type' => 'Veg garden', 'base' => 'cheesy crust','price' => 16],
         ['type' => 'Tandoori Chicken', 'base' => 'garlic crust','price' => 22]
     ];
-    return view ('pizzas', ['pizzas' => $pizzas]);
+    // query parameters in url pizzahouse.com/?name=maria
+    $name = request('name');
+    return view ('pizzas', [
+        'pizzas' => $pizzas,
+        'name' => $name,
+        'age' => request('age')
+    ]);
 });
 
 ?>
