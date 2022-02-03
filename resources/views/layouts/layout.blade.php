@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <link href="/css/main.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
       <!-- content where we want to apply style -->

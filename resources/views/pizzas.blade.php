@@ -10,26 +10,14 @@
             Pizza List
         </div>
 
-    <!-- @for ($i = 0; $i < count($pizzas); $i++)
-    <p> {{ $pizzas[$i]['type'] }} </p>
-    @endfor -->
-
-    <p>{{$name}} </p>
-    <p>{{$age}} </p>
-
-    @foreach($pizzas as $pizza)
-    <!-- <div> {{ $pizza['type']}} - {{ $pizza['base']}}  </div> -->
-    <div> {{$loop -> index }} {{ $pizza['type']}} - {{ $pizza['base']}}  </div>
-
-    @if($loop -> first)
-    <span> First in the Loop </span>
-    @endif
-
-    @if($loop -> last)
-    <span> Last in the Loop </span>
-    @endif
-
-    @endforeach
+    
+        @foreach($pizzas as $pizza)
+    
+            <div> 
+                {{$pizza->name }} {{ $pizza-> type}} - {{$pizza-> base}}
+            </div>
+   
+        @endforeach
     </div>
 </div>
   
